@@ -1,0 +1,31 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/educoredb
+    username: postgres
+    password: root
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+educore:
+  jwt:
+    secret-key: w.+.Wi+NqVDqVpFwMUchmZaJ8]q@X#Vf#2gAL(~}l[.fOg8vdE
+    issuer: EducoreAPI
+
+  superadmin:
+    email: admin@educore.com
+    password: Admin1234
